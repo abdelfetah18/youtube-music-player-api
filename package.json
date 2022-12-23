@@ -1,0 +1,23 @@
+{
+  "name": "youtube-music-player",
+  "version": "1.0.0",
+  "description": "a server that scrap youtube videos audio urls.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "youtube",
+    "music-player",
+    "music"
+  ],
+  "author": "abdelfetah-dev",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.18.2",
+    "ytdl-core": "^4.11.2"
+  }
+}
