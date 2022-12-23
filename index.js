@@ -9,7 +9,7 @@ const ytdl = require("ytdl-core");
 app.get("/video/:video_id", async (req, res) => {
    var videoID = req.params.video_id;
    let info = await ytdl.getInfo(videoID);
-    let audioFormats = info.formats.filter(v => v.audioCodec == "aac"); // ytdl.filterFormats(info.formats, 'audioCodec');
+    let audioFormats = info.formats.filter(f => f.container == "mp4");
     res.status(200).json({
         status: "success",
         data: { url: audioFormats[0].url, title: info.videoDetails.title, thumbnail: info.videoDetails.thumbnail.thumbnails[info.videoDetails.thumbnail.thumbnails.length - 1].url, }
